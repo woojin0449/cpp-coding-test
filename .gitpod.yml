@@ -1,0 +1,12 @@
+tasks:
+  - name: C++ Setup
+    init: |
+      sudo apt update
+      sudo apt install -y g++ cmake gdb
+    command: |
+      g++ -std=c++17 -O2 -Wall main.cpp -o main && ./main
+
+vscode:
+  extensions:
+    - ms-vscode.cpptools
+    - ms-vscode.cmake-tools
