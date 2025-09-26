@@ -2,16 +2,17 @@
 #include<vector>
 using namespace std;
 
-int combin_2(int a){
+long long combin_2(long long a){ // 먹는놈도 싸는놈도 long long
     return a*(a-1)/2;
 }
 int main() {
     ios::sync_with_stdio(false);
     cin.tie(0);
 
-    int n,m,total=0;
+    int n,m;
+    long long total=0;
     cin>>n>>m;
-    vector<int>A(n+1,0);
+    vector<long long>A(n+1,0);
     vector<long long>D(n+1,0);
     vector <long long>index(m+1,0); // if m=3, then 0 1 2 because modular
     for(int i=1;i<=n;i++){
